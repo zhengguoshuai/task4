@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		@keyframes rotate{
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+			@keyframes san{
+			100%{
+				transform: rotate(720deg);
+			}
+		}
+		.b{
+			width: 300px;
+			height: 300px;
+			border: 1px solid black;
+			border-radius: 50%;
+			background-color: white;
+			position: absolute;
+			left: 400px;
+			top: 200px;
+		}
+		.a{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			border-radius: 50%;
+			border: 1px solid red;
+			position: relative;
+			left: 100px;
+			top: 100px;
+			box-shadow: 3px 3px 6px red, -3px -3px 6px red, 3px -3px 6px red, -3px 3px 6px red;
+		}
+			.c{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			border-radius: 50%;
+			background-color: transparent;
+			position: absolute;
+			left: 303px;
+			top: 200px;
+			transform-origin: 250px 150px;
+			animation: rotate 3s infinite linear;
+		}
+		.d{
+			width: 50px;
+			height: 50px;
+			background-color: green;
+			border-radius: 50%;
+			border: 1px solid green;
+			position: relative;
+			left: 75px;
+			top: 75px;
+		}
+		.e{
+			width: 15px;
+			height: 15px;
+			background-color: blue;
+			border-radius: 50%;
+			border: 1px solid blue;
+			position: absolute;
+			left: -80px;
+			top: -15px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="b">
+		<div class="a">
+		</div>
+	</div>
+		<div class="c">
+		<div class="d">
+		<div class="e"></div>
+		</div>
+	</div>
+</body>
+</html>
