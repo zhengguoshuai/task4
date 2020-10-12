@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		@keyframes zhuan{
+			0% {
+				transform: rotateX(0) rotateY(0) rotateZ(0deg);
+			}
+
+			100% {
+				transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+			}
+		}
+.box{
+	width: 400px;
+	height: 400px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+	perspective: 1200px;
+		transition: transform .3s ease-in;
+}
+.box1{
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	background:rgba(250, 0, 0, -5);
+	transform:rotateX(-35deg) rotateY(30deg);
+	animation: zhuan 10s infinite linear;
+		transition: transform .3s ease-in;
+
+}
+
+.small{
+	width: 200px;
+	height: 200px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-100px;
+	margin-top:-100px;
+	background:currentcolor;/*背景颜色使用color的值*/
+		transition: transform .3s ease-in;
+}
+
+.small1{
+	color:red;
+	transform: translateZ(100px);
+}
+.small2{
+	color:green;
+		transform: rotateY(180deg)translateZ(100px);
+}
+.small3{
+	color:blue;
+transform: rotateY(90deg) translateZ(100px);
+}
+.small4{
+color:orange;
+transform: rotateY(-90deg)translateZ(100px);
+}
+.small5{
+	color:purple;
+	transform:rotateX(90deg)  translateZ(100px);
+}
+.small6{
+	color:pink;
+	transform:rotateX(-90deg)  translateZ(100px);
+}
+.box:hover .small{
+	box-shadow:0 0 10px currentcolor;
+}
+.big{
+	width: 400px;
+	height: 400px;
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	margin-left:-200px;
+	margin-top: -200px;
+	background:rgba(140, 140, 140,.2);
+}
+
+
+
+
+.big1{
+	transform: translateZ(200px);
+}
+
+.big2{
+
+		transform: rotateY(180deg)translateZ(200px);
+}
+.big3{
+transform: rotateY(90deg) translateZ(200px);
+}
+.big4{
+
+transform: rotateY(-90deg)translateZ(200px);
+}
+.big5{
+	
+	transform:rotateX(90deg)  translateZ(200px);
+}
+.big6{
+	transform:rotateX(-90deg)  translateZ(200px);
+}
+
+.box:hover .big1{
+	transform: translateZ(280px);
+}
+
+.box:hover .big2{
+
+		transform: rotateY(180deg)translateZ(280px);
+}
+.box:hover .big3{
+transform: rotateY(90deg) translateZ(280px);
+}
+.box:hover .big4{
+
+transform: rotateY(-90deg)translateZ(280px);
+}
+.box:hover .big5{
+	
+	transform:rotateX(90deg)  translateZ(280px);
+}
+.box:hover .big6{
+	transform:rotateX(-90deg)  translateZ(280px);
+}
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+	<div class="box1">
+	<div class="small small1"></div>
+	<div class="small small2"></div>
+	<div class="small small3"></div>
+	<div class="small small4"></div>
+	<div class="small small5"></div>
+	<div class="small small6"></div>
+	<div class="big big1"></div>
+	<div class="big big2"></div>
+	<div class="big big3"></div>
+	<div class="big big4"></div>
+	<div class="big big5"></div>
+	<div class="big big6"></div>
+	</div>
+    </div>
+</body>
+</html>
